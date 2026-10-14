@@ -2,9 +2,7 @@
 
 A luxury restaurant website built with **HTML5** and **CSS3 only** (no JavaScript, no frameworks) as a hands-on practice project for learning front-end fundamentals.
 
-**Live demo:** https://YOUR-USERNAME.github.io/Golden-Dish/
-
-![Golden Dish preview](images/preview.png)
+**Live demo:**  https://batoulkhalifa094-art.github.io/Golden-Dish/
 
 ## About the project
 
