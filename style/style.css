@@ -1,0 +1,691 @@
+html{ scroll-behavior: smooth;}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #edeadf;
+    perspective: 700px;
+}
+
+
+.offers-container {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: large;
+}
+
+.offers-container div {
+    color: gray;
+    padding: 10px;
+    text-align: center;
+    width: 34%;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.offers-container div i {
+    color: black;
+}
+
+.offers-container .last-offer {
+    border-right: none;
+}
+
+
+
+.search-bar div {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search-bar div img {
+    height: 10%;
+    width: 10%;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 2px solid #D4AF37;
+    border-radius: 10px;
+    height: 60px;
+    width: 650px;
+    font-size: larger;
+    overflow: hidden;
+}
+
+.search input {
+    font-size: larger;
+    border: none;
+    flex-grow: 1;
+    background-color: transparent;
+}
+
+.search input:focus {
+    outline: none;
+    color: #ab8d2e;
+}
+
+.search select {
+    font-size: large;
+    color: #ab8d2e;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.search div {
+    width: 10%;
+    height: 100%;
+    background-color: #D4AF37;
+    cursor: pointer;
+}
+
+.search-bar div .contacts .contacts-icon {
+    height: 50px;
+    width: 50px;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.search-bar div .contacts .contacts-icon:hover {
+    background-color: #fbd042;
+    color: white;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+
+.nav-bar ul {
+    width: 100%;
+    height: 50PX;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #252524;
+
+
+}
+
+.nav-bar ul li {
+    color: #D4AF37;
+    font-size: larger;
+    padding: 5px;
+}
+
+.nav-bar ul a {
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-bar ul a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: inherit;
+
+    border-top: 2px solid #D4AF37;
+    /* الخط العلوي */
+    border-bottom: 2px solid #D4AF37;
+    /* الخط الأيمن */
+
+    opacity: 0;
+    width: 0%;
+
+    transition: 0.4s ease-in-out;
+}
+
+.nav-bar ul a:hover::after {
+    width: 100%;
+
+    opacity: 1;
+}
+
+.nav-bar ul a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: inherit;
+
+    border-left: 2px solid #D4AF37;
+    /* الخط الأيسر */
+    border-right: 2px solid #D4AF37;
+
+    opacity: 0;
+
+    height: 0%;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-bar ul a:hover::before {
+
+    height: 100%;
+    opacity: 1;
+}
+
+.hero {
+    background-image: url(../images/Golden-Dish-hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh);
+    color: #f8f6f6;
+    position: relative;
+}
+
+.hero div {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    text-align: center;
+    font-size: larger;
+}
+
+.hero i {
+    cursor: pointer;
+    position: absolute;
+    font-size: 40px;
+    color: rgb(194, 21, 21);
+}
+
+.hero .left {
+    top: 50%;
+    left: 10%;
+}
+
+.hero .right {
+    top: 50%;
+    left: 90%;
+}
+
+
+.services {
+    height: 600px;
+    width: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+
+.services-box {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+
+    animation: rotateToNormal 1.2s forwards;
+
+    /* ربط الأنيميشن بالـ Scroll التلقائي للمتصفح */
+    view-timeline-name: --scrollRotate;
+    animation-timeline: --scrollRotate;
+    opacity: 0;
+    /* تبدأ الحركة أول ما يلمس العنصر أسفل الشاشة وتكتمل عند صعوده قليلاً */
+    animation-range: entry 30% cover 55%;
+}
+
+.services-box:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 20px 10px rgba(198, 196, 77, 0.474);
+
+}
+
+@keyframes rotateToNormal {
+    from {
+
+        transform: rotate(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+.servece-box-overlay {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    top: calc(50% - 7.5%);
+    text-align: center;
+    padding: 10px;
+    font-size: larger;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.500);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: 0.5s ease;
+}
+
+.services-box:hover .servece-box-overlay {
+    transform: scale(1);
+    color: white;
+}
+
+.services-box::before {
+    content: "";
+    position: absolute;
+
+    box-sizing: inherit;
+
+    width: 100%;
+    height: 100%;
+
+    transform-origin: center;
+    transform: scale(1);
+
+    background-color: rgba(0, 0, 0, 0.242);
+    transition: 0.5s ease;
+}
+
+.services-box:hover::before {
+    transform: scale(0);
+}
+
+
+.services .services1 {
+    background-image: url(../images/Golden-Dish-fresh-ingredients.jpg);
+}
+
+.services .services2 {
+    background-image: url(../images/Golden-Dish-Vegetarian-meals.jpg);
+}
+
+.services .services3 {
+    background-image: url(../images/Golden-Dish-Healthy-meals.jpg);
+}
+
+
+.special-dishes-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+.special-dishes-item{
+    width: 250px;
+    height: 350px;
+    border: 1px solid #D4AF37;
+    box-shadow: 0px 0px 20px 10px rgba(134, 133, 67, 0.474);
+    background-color: #f8f6f6;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    line-height: 40px;
+}
+
+.OFFER{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: rgb(244, 101, 101);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.special-dishes-item img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+
+}
+
+.special-dishes-btn{
+    height: 30px;
+    width: 100px;
+    background-color: #D4AF37;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    
+}
+.dish-hand{
+    color:rgb(159, 64, 64);
+    opacity: 0;
+}
+
+.special-dishes-item:hover .dish-hand{
+    animation: dishHandAnimation 1s infinite ;
+    opacity: 1;
+}
+
+@keyframes dishHandAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.special-dishes-btn:hover{
+    transform:scale(1.06);
+}
+.special-dishes-description{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* القسم: عمودين (صور | نص) أو (نص | صور) حسب ترتيب الـ HTML */
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* شبكة الصور: صورة كبيرة فوق + صورتين تحتها */
+.showcase-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.showcase-images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.showcase-img-main {
+  grid-column: 1 / 3;
+  height: 280px;
+}
+
+.showcase-img-left,
+.showcase-img-right {
+  height: 160px;
+}
+
+/* الأنيميشن المرتبط بالسكرول */
+.showcase-img-left {
+  animation: showcaseFromLeft linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 80%;
+}
+
+.showcase-img-right {
+  animation: showcaseFromRight linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 80%;
+}
+
+@keyframes showcaseFromLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showcaseFromRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* تنسيق النص */
+.showcase-text {
+  text-align: center;
+}
+
+.showcase-label {
+  color: #ab8d2e;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.showcase-text h2 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.showcase-text p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: larger;
+}
+
+.showcase-btn {
+  display: inline-block;
+  background: #D4AF37;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.showcase-btn:hover {
+  background: #f4ca41;
+  transform: scale(1.1);
+  transition: 0.5s ;
+}
+.Menu{
+    position: relative;
+    padding-bottom: 20px;
+}
+.Menu::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: -20px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    background-color: #edeadf;
+    transform: rotate(45deg);
+}
+.Menu > h2{
+    text-align: center;
+    margin: 15px 0;
+    font-size:xx-large;
+}
+.ander-line{
+    margin: auto;
+    height: 3px;
+    width: 110px;
+    background-color: black;
+    margin-bottom: 15px;
+}
+.menu-grid{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.menu-card{
+    position: relative;
+    margin-bottom: 20px;
+    width: 260px;
+    height: 380px;/* الغلط بالبداية انو ما حددت عرض و طول للاب مشان هيك طلعوا البطاقات على قسم ال footer */
+    transform-style: preserve-3d;
+    transition: 0.7s ease ;
+}
+
+.menu-card:hover{
+    transform: rotateY(180deg);
+}
+.card-front{
+    position: absolute;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    
+}
+.card-front::after{ 
+    content: "";
+    position: absolute;
+    background:-webkit-linear-gradient(top,rgba(0, 0, 0, 0.842),rgba(54, 54, 54, 0));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+}
+.card-front .card-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    color: #D4AF37;
+    text-align: center;
+    z-index: 15;
+}
+.category-tag{
+    display: block;
+    height: 30px;
+    width: 220px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    background-color:#ab8d2e;
+    color: black;
+    border-radius: 15px;
+}
+.card-back{
+    position: absolute;
+    width: 260px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 3;
+    background: #f4e9d0;
+    border: 1px solid #ab8d2e;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(-180deg);
+}
+.card-back h3, .card-back i {
+    color: #6b4f0d;
+    font-size: x-large;
+    margin: 8px 0 6px;
+}
+.card-back p {
+    font-size: 17px;
+    color: #5b4a2a;
+    margin-bottom: 14px;
+}
+.card-back button{
+transition: .5s;
+}
+.card-back button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.food-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.option-btn {
+    background: #e0c068;
+    border: 1px solid #ab8d2e;
+    color: #2a2110;
+    font-size: 15px;
+    padding: 9px 10px;
+    border-radius: 8px;
+}
+.see-more-btn {
+    margin-top: auto;
+    background: #3b2f14;
+    color: #f4e9d0;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+}
+
+.footer {
+    background-color: rgb(143, 142, 142);
+    color: #252524;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    font-size: large;
+    line-height: 25px;
+}
+
+.footer div {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    color: rgb(222, 220, 220);
+    background-color: #484846;
+
+}
+
+.footer div>div {
+    cursor: pointer;
+}
+
+.footer h3 {
+    margin: 0 10px;
+    display: inline;
+}

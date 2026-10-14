@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Golden Dish</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./images/Golden-Dish-logo.png">
+    <meta name="author" content="Batoul Wafik Khalifa">
+    <meta name="description" content="project for learn html5 and css3">
+    <meta name="keywords" content="html5 , css3">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <section class="offers">
+            <div class="offers-container">
+                <div><i class="fa fa-truck"></i>
+                    <p>Delivery within 30 minutes</p>
+                </div>
+                <div><i class="fa fa-leaf"></i>
+                    <p>Fresh and organic ingredients</p>
+                </div>
+                <div class="last-offer"><i class="fa fa-clock-o"></i>
+                    <p>online support 24/7</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="search-bar">
+            <div>
+                <img src="./images/Golden-Dish-logo.png" draggable="false">
+                <div class="search">
+                    <input type="search" placeholder="Search">
+                    <p>choose a meal :</p>
+                    <select>
+                        <option>Signature Dishes</option>
+                        <option>Main Courses</option>
+                        <option>Desserts & Drinks</option>
+                    </select>
+                    <div><i class="fa fa-search"></i></div>
+                </div>
+
+                <div class="contacts">
+                    <div class="contacts-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="contacts-icon"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="contacts-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="contacts-icon"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-bar">
+            <ul>
+                <a href="#hero">
+                    <li>HOME</li>
+                </a>
+                <a href="#2">
+                    <li>What we offer</li>
+                </a>
+                <a href="#special-dishes">
+                    <li>Special Dishes</li>
+                </a>
+                <a href="#MAIN COURSES">
+                    <li>MAIN COURSES</li>
+                </a>
+                <a href="#STARTERS&DESSERTS">
+                    <li>STARTERS & DESSERTS</li>
+                </a>
+                <a href="#Menu">
+                    <li>Menu</li>
+                </a>
+                <a href="#footer">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+        </section>
+
+
+    </header>
+
+    <section class="hero" id="hero">
+        <i class="fa fa-chevron-circle-left left"></i>
+        <div>
+            <h1>Golden Dish</h1>
+            <h2>Experience luxury in every bite</h2>
+            <p>Global dishes, crafted by master chefs with 100% fresh ingredients.</p>
+        </div>
+        <i class="fa fa-chevron-circle-right right"></i>
+    </section>
+
+
+    <!-- القسم الاول : الخدمات اللي بقدمها  -->
+    <section class="three-circled-sections" id="2">
+        <div class="services">
+            <div class="services-box services1">
+                <div class="servece-box-overlay">
+                    <p>Fresh Ingredients</p>
+                </div>
+            </div>
+            <div class="services-box services2">
+                <div class="servece-box-overlay">
+                    <p>Vegetarian Meals</p>
+                </div>
+            </div>
+            <div class="services-box services3">
+                <div class="servece-box-overlay">
+                    <p>Healthy Meals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم الثاني :  الاطباق المميزة  -->
+
+    <section class="special-dishes" id="special-dishes">
+
+        <div class="special-dishes-container">
+
+            <div class="special-dishes-item">
+                <div class="OFFER">OFFER</div>
+                <img src="./images/Grilled-Salmon.jfif" alt="special-dishes-img">
+                <h3>Grilled Salmon</h3>
+                <span class="old-price" style="color: rgb(170, 97, 97);"><del>$35.00</del></span>
+                <span class="new-price">$28.00</span><br>
+                <i class="fa-regular fa-hand-point-right fa-lg dish-hand"></i>&nbsp;
+                <button class="special-dishes-btn">ORDER NOW</button>
+                <div class="special-dishes-description">
+                    <span><i class="fa fa-heart-o"></i> Favorite</span>
+                    <span><i class="fa fa-eye"></i> Details</span>
+                </div>
+            </div>
+
+            <div class="special-dishes-item">
+                <div class="OFFER">OFFER</div>
+                <img src="./images/Royal-Beef-Burger.jfif" alt="special-dishes-img">
+                <h3>Royal Beef Burger</h3>
+                <span class="old-price" style="color: rgb(170, 97, 97);"><del>$20.00</del></span>
+                <span class="new-price">$15.00</span><br>
+                <i class="fa-regular fa-hand-point-right fa-lg dish-hand"></i>&nbsp;
+                <button class="special-dishes-btn">ORDER NOW</button>
+                <div class="special-dishes-description">
+                    <span><i class="fa fa-heart-o"></i> Favorite</span>
+                    <span><i class="fa fa-eye"></i> Details</span>
+                </div>
+            </div>
+
+            <div class="special-dishes-item">
+                <div class="OFFER">OFFER</div>
+                <img src="./images/Truffle-Pasta.jfif" alt="special-dishes-img">
+                <h3>Truffle Pasta</h3>
+                <span class="old-price" style="color: rgb(170, 97, 97);"><del>$26.00</del></span>
+                <span class="new-price">$21.00</span><br>
+                <i class="fa-regular fa-hand-point-right fa-lg dish-hand"></i>&nbsp;
+                <button class="special-dishes-btn">ORDER NOW</button>
+                <div class="special-dishes-description">
+                    <span><i class="fa fa-heart-o"></i> Favorite</span>
+                    <span><i class="fa fa-eye"></i> Details</span>
+                </div>
+            </div>
+
+            <div class="special-dishes-item">
+                <div class="OFFER">OFFER</div>
+                <img src="./images/Special-Sushi-Set.jfif" alt="special-dishes-img">
+                <h3>Special Sushi Set</h3>
+                <span class="old-price" style="color: rgb(170, 97, 97);"><del>$45.00</del></span>
+                <span class="new-price">$38.00</span><br>
+                <i class="fa-regular fa-hand-point-right fa-lg dish-hand"></i>&nbsp;
+                <button class="special-dishes-btn">ORDER NOW</button>
+                <div class="special-dishes-description">
+                    <span><i class="fa fa-heart-o"></i> Favorite</span>
+                    <span><i class="fa fa-eye"></i> Details</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- القسم الثالث: الأطباق الرئيسية (الصور يسار، النص يمين) -->
+    <section class="showcase" id="MAIN COURSES">
+        <div class="showcase-images">
+            <img class="showcase-img-main" src="./images/Grilled-steak-with-vegetables.jfif"
+                alt="Grilled steak with vegetables">
+            <img class="showcase-img-left" src="./images/Creamy-pasta.jpg" alt="Creamy pasta">
+            <img class="showcase-img-right" src="./images/Roasted-chicken.jpg" alt="Roasted chicken">
+        </div>
+
+        <div class="showcase-text">
+            <span class="showcase-label">MAIN COURSES</span>
+            <h2>Hearty Dishes, Crafted With Passion</h2>
+            <p>
+                From tender grilled steaks to creamy pasta and golden roasted chicken,
+                every main course at Golden Dish is prepared by our master chefs
+                using 100% fresh ingredients and served at its best.
+            </p>
+            <a href="#" class="showcase-btn">VIEW MAIN COURSES</a>
+        </div>
+    </section>
+
+    <!-- القسم الرابع: المقبلات والحلويات (النص يسار، الصور يمين) -->
+    <section class="showcase" id="STARTERS&DESSERTS">
+        <div class="showcase-text">
+            <span class="showcase-label">STARTERS & DESSERTS</span>
+            <h2>Start Light, Finish Sweet</h2>
+            <p>
+                Begin your meal with our fresh and flavorful starters, then end it
+                with handmade desserts and drinks that make every visit
+                a memorable one.
+            </p>
+            <a href="#" class="showcase-btn">VIEW STARTERS & DESSERTS</a>
+        </div>
+
+        <div class="showcase-images">
+            <img class="showcase-img-main" src="./images/Chocolate-dessert.jpg" alt="Chocolate dessert">
+            <img class="showcase-img-left" src="./images/Fresh-starter-salad.jpg" alt="Fresh starter salad">
+            <img class="showcase-img-right" src="./images/Cheesecake.png" alt="Cheesecake">
+        </div>
+    </section>
+
+    <!-- القسم الخامس : القائمة  -->
+    <section class="Menu" id="Menu">
+
+        <h2 class="section-title">Our Luxury Menu</h2>
+        <div class="ander-line"></div>
+        <div class="menu-grid">
+
+            <!-- Card 1: Main Courses -->
+            <div class="menu-card">
+
+                <!-- Front Side -->
+                <div class="card-front" style="background-image: url('./images/The-Royal-Taste-flip-card.png');">
+                    <div class="gradient-overlay"></div>
+                    <div class="card-content">
+                        <span class="category-tag"><i class="fa-solid fa-crown" style="padding: 0% 7px;"></i>Main
+                            Courses</span>
+                        <h2 style="color: aliceblue;">The Royal Taste</h2>
+                        <p>A mesmerizing selection of premium meats and seafood, crafted by master chefs.</p>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Back Side -->
+                <div class="card-back">
+                     <i class="fa-solid fa-crown"></i>
+                    <h3>Main Courses</h3>
+                    <p>Select your extraordinary entree for tonight:</p>
+                    <div class="food-options">
+                        <button class="option-btn">Prime Tenderloin Steak</button>
+                        <button class="option-btn">Grilled Salmon with Lemon Butter Sauce</button>
+                        <button class="option-btn">Rosemary Infused Lamb Racks</button>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+
+            </div>
+
+            <!-- Card 2: Appetizers & Soups -->
+            <div class="menu-card">
+
+                <!-- Front Side -->
+                <div class="card-front" style="background-image: url('./images/Appetizers&Soups-flip-card.png');">
+                    <div class="gradient-overlay"></div>
+                    <div class="card-content">
+                        <span class="category-tag"><i class="fa-solid fa-crown" style="padding: 0% 7px;"></i>Appetizers
+                            & Soups</span>
+                        <h2 style="color: aliceblue;">The Prelude</h2>
+                        <p>Warm signature soups and artisanal appetizers to elevate your dining journey.</p>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Back Side -->
+                <div class="card-back">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3>Appetizers & Soups</h3>
+                    <p>Exquisite starters to awaken your palate:</p>
+                    <div class="food-options">
+                        <button class="option-btn">Wild Mushroom Cream Soup</button>
+                        <button class="option-btn">Smoked Eggplant Mutabbal with Walnuts</button>
+                        <button class="option-btn">Quinoa Salad with Pomegranate & Avocado</button>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+
+            </div>
+
+            <!-- Card 3: Fine Drinks -->
+            <div class="menu-card">
+
+                <!-- Front Side -->
+                <div class="card-front" style="background-image: url('./images/Fine-Drinks-flip-card.png');">
+                    <div class="gradient-overlay"></div>
+                    <div class="card-content">
+                        <span class="category-tag"><i class="fa-solid fa-crown" style="padding: 0% 7px;"></i>Fine
+                            Drinks</span>
+                        <h2 style="color: aliceblue;">Royal Refreshment</h2>
+                        <p>Artisanal mocktails and fresh juices sourced from rare ingredients.</p>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Back Side -->
+                <div class="card-back">
+                     <i class="fa-solid fa-crown"></i>
+                    <h3>Fine Drinks</h3>
+                    <p>Refresh yourself with our premium selections:</p>
+                    <div class="food-options">
+                        <button class="option-btn">Blueberry & Gold Leaf Mojito</button>
+                        <button class="option-btn">Fresh Pomegranate & Rose Infusion</button>
+                        <button class="option-btn">Signature Cold Brew Blends</button>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+
+            </div>
+
+            <!-- Card 4: Desserts -->
+            <div class="menu-card">
+
+                <!-- Front Side -->
+                <div class="card-front"
+                    style="background-image: url('./images/Oriental&Western-Desserts-flip-card.png');">
+                    <div class="gradient-overlay"></div>
+                    <div class="card-content">
+                        <span class="category-tag"><i class="fa-solid fa-crown" style="padding: 0% 7px;"></i>Oriental &
+                            Western Desserts</span>
+                        <h2 style="color: aliceblue;">A Sweet Finale</h2>
+                        <p>Innovative dessert creations blending rich heritage with modern pastry arts.</p>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Back Side -->
+                <div class="card-back">
+                     <i class="fa-solid fa-crown"></i>
+                    <h3>Luxury Desserts</h3>
+                    <p>Conclude your evening with pure bliss:</p>
+                    <div class="food-options">
+                        <button class="option-btn">Dark Chocolate Fondant with Ice Cream</button>
+                        <button class="option-btn">Royal Pistachio Baklava with Dondurma</button>
+                        <button class="option-btn">Saffron & Cardamom Cheesecake</button>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer" id="footer">
+
+            <img src="./images/Golden-Dish-logo.png" style="width:130px ; height:130px; margin: 50px 0px 25px;">
+            <p>copy &copy; by Batoul Wafik Khalifa</p>
+            <p> date: copy in 14/10/2026 </p>
+            <p> special meals</p>
+            <div>
+                <div><i class="fa-brands fa-facebook-f"></i>
+                    <h3>fecebook</h3>
+                </div>
+                <div><i class="fa-brands fa-instagram"></i>
+                    <h3>instagram</h3>
+                </div>
+                <div><i class="fa-brands fa-telegram"></i>
+                    <h3>telegram</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+
+</html>
